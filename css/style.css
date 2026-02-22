@@ -10,6 +10,89 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* START SCREEN */
+.start-screen {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(#87ceeb, #e0f7ff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  z-index: 100;
+}
+
+.start-screen input {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.start-screen button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* LEADERBOARD CARD */
+.leaderboard {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* TABLE STYLING */
+#highScoreTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#highScoreTable th {
+  background: #4CAF50;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+}
+
+#highScoreTable td {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+/* Top 3 Highlight */
+#highScoreTable tbody tr:nth-child(1) {
+  background: #ffd70033; /* Gold */
+  font-weight: bold;
+}
+
+#highScoreTable tbody tr:nth-child(2) {
+  background: #c0c0c033; /* Silver */
+}
+
+#highScoreTable tbody tr:nth-child(3) {
+  background: #cd7f3233; /* Bronze */
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .leaderboard {
+    padding: 15px;
+  }
+
+  #highScoreTable th,
+  #highScoreTable td {
+    font-size: 12px;
+    padding: 6px;
+  }
+}
+
 /* GAME AREA */
 .game {
   width: 100vw;

@@ -8,12 +8,38 @@
 </head>
 <body>
 
+  <!-- START SCREEN -->
+  <div class="start-screen">
+    <h2>🎮 Tom & Jerry Mario Game</h2>
+
+    <input type="text" id="playerName" placeholder="Enter Your Name" />
+    <button onclick="startGame()">Start Game</button>
+    <div class="leaderboard">
+     <h3>🏆 High Scores</h3>
+     <table id="highScoreTable">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Score</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+     </table>
+    </div>
+  </div>
+
+  <!-- GAME AREA -->
   <div class="game">
     <div class="score">Score: <span id="score">0</span></div>
     <div class="jerry"></div>
     <div class="tom"></div>
     <div class="ground"></div>
-    <div class="game-over">GAME OVER<br><button onclick="restart()">Restart</button></div>
+
+    <div class="game-over">
+      GAME OVER <br>
+      <button onclick="restart()">Restart</button>
+    </div>
   </div>
 
   <script src="js/script.js"></script>
