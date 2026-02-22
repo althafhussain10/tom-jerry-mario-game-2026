@@ -25,7 +25,12 @@ function startGame() {
   }
 
   playerName = nameInput;
+
+  // Hide start screen
   document.querySelector(".start-screen").style.display = "none";
+
+  // Show game
+  document.querySelector(".game").style.display = "block";
 
   isAlive = true;
   startCollisionCheck();
